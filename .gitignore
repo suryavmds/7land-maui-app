@@ -1,0 +1,65 @@
+# General OS/IDE files
+.DS_Store
+*.user
+*.suo
+*.userprefs
+*.vs/
+.vscode/
+.idea/
+
+# Build outputs
+[Bb]in/
+[Oo]bj/
+out/
+artifacts/
+
+# Debug files
+*.pdb
+*.ilk
+*.log
+*.dll
+*.exe
+
+# NuGet packages
+.nuget/
+packages/
+*.nupkg
+
+# .NET MAUI specific
+*.apk
+*.aab
+*.ipa
+*.keystore
+*.jks
+*.bundle
+*.appxbundle
+*.appxupload
+
+# Firebase/Fastlane
+google-services.json
+GoogleService-Info.plist
+fastlane/report.xml
+
+# RazorPay/Secrets
+appsettings.json
+appsettings.Development.json
+secrets.json
+
+# Local development files
+*.cache
+*.swp
+*~
+
+# macOS
+._*
+
+# Unit test results
+[Tt]est[Rr]esult*/
+*.trx
+
+# Rider IDE
+*.sln.iml
+
+# Visual Studio
+*.VC.db
+*.VC.VC.opendb
