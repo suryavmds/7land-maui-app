@@ -4,15 +4,6 @@
 ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?logo=firebase&logoColor=black)
 ![RazorPay](https://img.shields.io/badge/RazorPay-00B9F1?logo=razorpay&logoColor=white)
 
-## 📝 Table of Contents
-- [Project Overview](#-project-overview)
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Models](#-models)
-- [Getting Started](#-getting-started)
-- [Team](#-team)
-- [License](#-license)
-
 ## 🌟 Project Overview
 7LAND is a lightweight e-commerce solution built with .NET MAUI that enables:
 - Admin product management
@@ -64,6 +55,30 @@ public class Order
     public decimal TotalAmount { get; set; }
     public DateTime OrderDate { get; set; } = DateTime.Now;
     public bool IsPaid { get; set; }
+}
+```
+```csharp
+// User.cs
+public class User
+{
+    public string Uid { get; set; } // Firebase Auth ID
+    public string Email { get; set; }
+    public string DisplayName { get; set; }
+    public bool IsAdmin { get; set; }
+    public DateTime CreatedAt { get; set; } = DateTime.Now;
+    public string PhoneNumber { get; set; }
+}
+```
+```csharp
+// Payment.cs
+public class Payment
+{
+    public string Id { get; set; } // RazorPay Payment ID
+    public string OrderId { get; set; } // Links to Order model
+    public decimal Amount { get; set; }
+    public string Currency { get; set; } = "CAD";
+    public string Status { get; set; } // "Pending", "Completed", "Failed"
+    public DateTime PaymentDate { get; set; } = DateTime.Now;
 }
 ```
 
